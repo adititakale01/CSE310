@@ -1,0 +1,20 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int a = s.nextInt();
+        int b = s.nextInt();
+        float p = (100/a)*b;
+        System.out.println((int)p);
+        if(p<((75/a)*100))
+            System.out.print("No");
+        else
+            System.out.print("Yes");
+    }
+}
