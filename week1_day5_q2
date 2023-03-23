@@ -1,0 +1,44 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class W11 {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);  
+        long accno = sc.nextLong();
+        sc.nextLine();
+        String name=sc.nextLine();  
+        char gender=sc.next().charAt(0); 
+        int amt=sc.nextInt();
+        
+        if(amt<=20000)
+        {
+            if(gender=='M')
+            {
+                System.out.println("Hi Mr. "+name+"!");
+                System.out.print("Your Account Balance after withdrawl is "+(20000-amt)+".");
+            }
+            else
+            {
+                System.out.println("Hi Ms. "+name+"!");
+                System.out.print("Your Account Balance after withdrawl is "+(20000-amt)+".");        
+            }
+        }
+        else
+        {
+             if(gender=='M')
+            {
+                System.out.println("Hi Mr. "+name+"!");
+                System.out.print("Insufficient Funds! You can not withdraw "+amt+".");
+            }
+            else
+            {
+                System.out.println("Hi Ms. "+name+"!");
+                System.out.print("Insufficient Funds! You can not withdraw "+amt+".");        
+            }   
+        }
+    }
+}
