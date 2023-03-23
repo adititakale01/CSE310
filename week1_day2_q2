@@ -1,0 +1,21 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        int x,y,n;
+        Scanner s = new Scanner (System.in);
+        x = s.nextInt();
+        y = s.nextInt();
+        n = s.nextInt();
+        for(int i=x; i<=y; i++)
+        {
+            if(i%n==0)
+                    System.out.print(i+" ");
+        }
+    }
+}
