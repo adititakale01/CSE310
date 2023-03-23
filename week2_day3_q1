@@ -1,0 +1,31 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import java.lang.*;
+public class Solution {
+
+    private static final DecimalFormat d1 = new DecimalFormat("0.00");
+    private static final DecimalFormat d2 = new DecimalFormat("0.0");
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int t = s.nextInt();
+        if(t>0 && t<3)
+        {
+            float n = s.nextFloat();
+            if(t==1)
+            {
+                double c = (n-32)/1.8;
+                d1.setRoundingMode(RoundingMode.DOWN);
+                System.out.print(d1.format(c));
+            }
+            else if(t==2)
+            {
+                double fa = (1.8*n)+32;
+                d2.setRoundingMode(RoundingMode.DOWN);
+                System.out.print(d2.format(fa));
+            }
+        }
+    }
+}
