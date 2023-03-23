@@ -1,0 +1,42 @@
+import java.io.*;
+import java.util.*;
+
+
+public class Solution {
+  public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
+    String str = s.nextLine();
+    
+    int count = 0;
+    for (int i = str.length() - 2; i < str.length(); i++) {
+      char c = str.charAt(i);
+      if (c >= '0' && c <= '9') 
+      {
+        count = count * 10 + (c - '0');
+        } 
+        else 
+        {
+        System.out.println("Invalid Input");
+        return;
+      }
+    }
+    
+    if (count < 10 || count >= 100) 
+    {
+      System.out.println("Invalid Input");
+      return;
+    }
+    
+    int sum = (count / 10) + (count % 10);
+    int pro = (count / 10) * (count % 10);
+    
+    if (sum + pro == count) 
+    {
+      System.out.println("Special two digit number");
+    } 
+      else 
+      {
+      System.out.println("Not a special two digit number");
+    }
+  }
+}
