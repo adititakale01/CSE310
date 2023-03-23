@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Main {
+
+  public static void main(String[] args) {
+
+    int n;
+    Scanner s = new Scanner(System.in);
+    n=s.nextInt();
+    boolean f = false;
+    for (int i=2; i<=n/2; ++i) 
+    {
+      if (n%i==0) 
+      {
+        f=true;
+        break;
+      }
+    }
+
+    if (!f)
+      System.out.println("Prime Number");
+    else
+      System.out.println("Not Prime Number");
+  }
+}
